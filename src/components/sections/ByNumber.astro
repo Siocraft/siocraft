@@ -1,5 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Container from "../shared/Container.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="relative mt-12 md:mt-16">
@@ -11,36 +15,36 @@ import Container from "../shared/Container.astro";
         <h2
           class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
         >
-          12+
+          60+
         </h2>
-        <p class="mt-2 text-heading-3">Created projects</p>
+        <p class="mt-2 text-heading-3">{t("byNumber.createdProjects")}</p>
       </div>
 
       <div class="text-center">
         <h2
           class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
         >
-          200+
+          2+
         </h2>
-        <p class="mt-2 text-heading-3">Projects</p>
+        <p class="mt-2 text-heading-3">{t("byNumber.yearsInBusiness")}</p>
       </div>
 
       <div class="text-center">
         <h2
           class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
         >
-          120
+          40+
         </h2>
-        <p class="mt-2 text-heading-3">Happy Client</p>
+        <p class="mt-2 text-heading-3">{t("byNumber.happyCustomers")}</p>
       </div>
 
       <div class="text-center">
         <h2
           class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
         >
-          5+
+          30+
         </h2>
-        <p class="mt-2 text-heading-3">Years</p>
+        <p class="mt-2 text-heading-3">{t("byNumber.teamMembers")}</p>
       </div>
     </div>
   </Container>
