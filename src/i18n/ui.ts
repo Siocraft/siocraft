@@ -21,6 +21,7 @@ export const ui = {
     "byNumber.happyCustomers": "Happy customers",
     "byNumber.yearsInBusiness": "Years in business",
     "byNumber.teamMembers": "Team members",
+    "brands.trustedBy": "Trusted by companies like",
   },
   es: {
     "welcome": "Bienvenid@",
@@ -37,5 +38,6 @@ export const ui = {
     "byNumber.happyCustomers": "Clientes felices",
     "byNumber.yearsInBusiness": "Años en el negocio",
     "byNumber.teamMembers": "Miembros del equipo",
+    "brands.trustedBy": "Confiado por empresas como",
   },
 } as const;
