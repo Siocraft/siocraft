@@ -10,75 +10,71 @@ const t = useTranslations(lang);
 
 const footerNav1 = [
     {
-        itemText:"Marketing",
+        itemText:t("footer.marketing"),
         itemLink:"#"
     },
     {
-        itemText:"Analylitics",
+        itemText:t("footer.analytics"),
         itemLink:"#"
     },
     {
-        itemText:"Commerce",
+        itemText:t("footer.commerce"),
         itemLink:"#"
     },
     {
-        itemText:"Insights",
+        itemText:t("footer.insights"),
         itemLink:"#"
     }
 ]
 
 const footerSupport = [
     {
-        itemText:"Pricing",
+        itemText:t("footer.pricing"),
         itemLink:"#"
     },
     {
-        itemText:"Guides",
+        itemText:t("footer.guides"),
         itemLink:"#"
     },
     {
-        itemText:"FAQ",
+        itemText:t("footer.faq"),
         itemLink:"#"
     },
     {
-        itemText:"Contact",
+        itemText:t("footer.contact"),
         itemLink:"#"
     }
 ]
 
 const footerCompany = [
     {
-        itemText:"About",
-        itemLink:"/about"
+        itemText:t("footer.aboutUs"),
+        itemLink: `/${lang}/about`
     },
     {
-        itemText:"Blog",
+        itemText:t("footer.blog"),
         itemLink:"#"
     },
     {
-        itemText:"Jobs",
+        itemText:t("footer.jobs"),
         itemLink:"#"
     },
     {
-        itemText:"Parteners",
-        itemLink:"#"
-    },
-    {
-        itemText:"Jobs",
+        itemText:t("footer.partners"),
         itemLink:"#"
     }
 ]
 const footerLegal = [
     {
-        itemText:"Claim",
+        itemText:t("footer.claim"),
         itemLink:"/#"
     },
     {
-        itemText:"Privacy",
+        itemText:t("footer.privacyPolicy"),
         itemLink:"#"
     },
     {
-        itemText:"Terms",
+        itemText:t("footer.termsAndConditions"),
         itemLink:"#"
     }
 ]
@@ -155,13 +151,13 @@ const footerLegal = [
             </div>
 
             <GroupFooterNav>
-                <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+                <FooterNav title={t("footer.company")} navItems={footerCompany}/>
+                <FooterNav title={t("footer.solutions")} navItems={footerNav1}/>
             </GroupFooterNav>
 
             <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
-                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+                <FooterNav title={t("footer.support")} navItems={footerSupport}/>
+                <FooterNav title={t("footer.resources")} navItems={footerLegal}/>
             </GroupFooterNav>
 
         </div>
