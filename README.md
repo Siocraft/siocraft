@@ -2,8 +2,9 @@
 
 A simple website to showcase the services of Siocraft, a web development agency.
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+<img width="1470" alt="image" src="https://github.com/Siocraft/siocraft/assets/56652644/9fca1f36-f3a7-4ecf-9e01-3578ed72e0e4">
+
+<img width="1470" alt="image" src="https://github.com/Siocraft/siocraft/assets/56652644/aac9222f-32e1-4629-ab20-5fe4b3b48860">
 
 ## Tools
 
