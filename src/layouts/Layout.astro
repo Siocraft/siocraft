@@ -1,17 +1,30 @@
 ---
 import Footer from "../components/elements/Footer.astro";
 import Navbar from "../components/elements/Navbar.astro";
+import { getLangFromUrl } from "../i18n/utils";
 
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
+    {
+      lang === "en"
+        ? <script async data-nf='{"formurl":"https://opnform.com/forms/contact-sfvllv","emoji":"🚀","position":"right","bgcolor":"#1d4ed8","width":"500"}' src='https://opnform.com/widgets/embed-min.js'></script>
+        : null
+    }
+    {
+      lang === "es"
+        ? <script async data-nf='{"formurl":"https://opnform.com/forms/contact-sfvllv-2","emoji":"🚀","position":"right","bgcolor":"#1d4ed8","width":"500"}' src='https://opnform.com/widgets/embed-min.js'></script>
+        : null
+    }
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logos/siocraft.png" />
@@ -31,6 +44,10 @@ const { title } = Astro.props;
   <script>
     const switchTheme = document.querySelector(
       "[data-switch-theme]"
+    ) as HTMLButtonElement;
+
+    const changeLanguage = document.querySelector(
+      "[data-change-language]"
     ) as HTMLButtonElement;
 
     if (
@@ -64,6 +81,17 @@ const { title } = Astro.props;
               localStorage.setItem("appTheme", "dark");
             }
           }
+        }
+      });
+    }
+
+    if (changeLanguage) {
+      changeLanguage.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (window.location.pathname.includes("/es")) {
+          window.location.pathname = window.location.pathname.replace("/es", "/en");
+        } else {
+          window.location.pathname = window.location.pathname.replace("/en", "/es");
         }
       });
     }
