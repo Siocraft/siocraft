@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "siocraft",
+    "projectKey": "Siocraft_restaurant"
+  }
+}
