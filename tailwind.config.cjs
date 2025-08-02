@@ -16,6 +16,17 @@ module.exports = {
 			},
 			screens:{
 				midmd:"880px"
+			},
+			keyframes: {
+				float: {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg) scale(1)' },
+					'25%': { transform: 'translateY(-8px) rotate(0.5deg) scale(1.02)' },
+					'50%': { transform: 'translateY(-4px) rotate(-0.5deg) scale(1.01)' },
+					'75%': { transform: 'translateY(-12px) rotate(0.25deg) scale(1.03)' },
+				}
+			},
+			animation: {
+				'float': 'float 4s ease-in-out infinite',
 			}
 		},
 	},
