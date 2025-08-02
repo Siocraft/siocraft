@@ -7,9 +7,9 @@ export interface Props{
 }
 const { title, description } = Astro.props
 ---
-<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
-    <div class="rounded-xl bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative">
-        <slot name="icon"/>
+<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 group">
+    <div class="rounded-xl bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 hover:shadow-lg">
+        <slot name="icon" class="transition-transform duration-300 group-hover:rotate-6"/>
     </div>
     <h2 class="md:text-xl font-semibold text-heading-2 mt-6 mb-4"> {title} </h2>
     <Paragraph>
